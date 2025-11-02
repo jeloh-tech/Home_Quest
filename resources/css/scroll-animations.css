@@ -1,0 +1,287 @@
+/* Professional Dribbble-Style Scroll Animations */
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scroll Progress Indicator */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    transform-origin: left;
+    z-index: 10000;
+    transition: transform 0.1s ease-out;
+}
+
+/* Parallax Container */
+.parallax-container {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Parallax Elements */
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    will-change: transform;
+    pointer-events: none;
+}
+
+.parallax-slow {
+    transform: translateY(0);
+    transition: transform 0.1s linear;
+}
+
+.parallax-medium {
+    transform: translateY(0);
+    transition: transform 0.1s linear;
+}
+
+.parallax-fast {
+    transform: translateY(0);
+    transition: transform 0.1s linear;
+}
+
+/* Scroll Trigger Animations */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.scroll-reveal-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scroll-reveal-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scroll-reveal-up {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-reveal-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-reveal-scale {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-reveal-scale.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Staggered Animations */
+.stagger-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.stagger-item.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Floating Elements with Scroll */
+.floating-scroll {
+    animation-play-state: paused;
+}
+
+.floating-scroll.active {
+    animation-play-state: running;
+}
+
+/* Morphing Shapes */
+.morphing-shape {
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.morphing-shape.active {
+    border-radius: 50% 20% 70% 30%;
+    transform: rotate(180deg) scale(1.1);
+}
+
+/* Text Reveal Animation */
+.text-reveal {
+    overflow: hidden;
+}
+
+.text-reveal span {
+    display: inline-block;
+    transform: translateY(100%);
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.text-reveal.active span {
+    transform: translateY(0);
+}
+
+/* Gradient Text Animation */
+.gradient-text-scroll {
+    background-size: 200% 200%;
+    animation: gradientShift 3s ease infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradientShift {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Pulse Animation on Scroll */
+.pulse-on-scroll {
+    animation: pulseScroll 2s ease-in-out infinite;
+}
+
+@keyframes pulseScroll {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+/* Magnetic Hover Effect */
+.magnetic-element {
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.magnetic-element:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+/* Liquid Button Animation */
+.liquid-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.liquid-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.liquid-button:hover::before {
+    left: 100%;
+}
+
+/* Section Transitions */
+.section-transition {
+    position: relative;
+}
+
+.section-transition::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    pointer-events: none;
+}
+
+.section-transition.active::before {
+    opacity: 1;
+}
+
+/* Performance Optimizations */
+.will-change-transform {
+    will-change: transform;
+}
+
+.will-change-opacity {
+    will-change: opacity;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    .scroll-reveal,
+    .scroll-reveal-left,
+    .scroll-reveal-right,
+    .scroll-reveal-up,
+    .scroll-reveal-scale {
+        transform: translateY(30px);
+    }
+
+    .stagger-item {
+        transform: translateY(20px);
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .scroll-reveal,
+    .scroll-reveal-left,
+    .scroll-reveal-right,
+    .scroll-reveal-up,
+    .scroll-reveal-scale,
+    .stagger-item {
+        transition: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    .parallax-slow,
+    .parallax-medium,
+    .parallax-fast {
+        transform: none !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}

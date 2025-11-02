@@ -1,0 +1,322 @@
+/* Maintenance Request Modal Styles */
+
+.maintenance-modal .modal-dialog {
+    max-width: 900px;
+}
+
+.maintenance-modal .modal-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+}
+
+.maintenance-modal .modal-header .modal-title {
+    color: white;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.maintenance-modal .modal-header .close {
+    color: white;
+    opacity: 0.8;
+    text-shadow: none;
+}
+
+.maintenance-modal .modal-header .close:hover {
+    color: white;
+    opacity: 1;
+}
+
+.maintenance-modal .modal-body {
+    padding: 0;
+    background-color: #f8f9fc;
+}
+
+.maintenance-modal .issue-header {
+    background: white;
+    padding: 2rem;
+    border-bottom: 1px solid #e3e6f0;
+    margin-bottom: 0;
+}
+
+.maintenance-modal .issue-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.maintenance-modal .issue-description {
+    font-size: 1.1rem;
+    color: #718096;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.maintenance-modal .priority-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.maintenance-modal .priority-badge.urgent {
+    background: linear-gradient(135deg, #fed7d7, #feb2b2);
+    color: #c53030;
+    border: 1px solid #fbb6ce;
+}
+
+.maintenance-modal .priority-badge.high {
+    background: linear-gradient(135deg, #feebc8, #fbd38d);
+    color: #c05621;
+    border: 1px solid #f6e05e;
+}
+
+.maintenance-modal .priority-badge.medium {
+    background: linear-gradient(135deg, #bee3f8, #90cdf4);
+    color: #2c5282;
+    border: 1px solid #63b3ed;
+}
+
+.maintenance-modal .priority-badge.low {
+    background: linear-gradient(135deg, #c6f6d5, #9ae6b4);
+    color: #276749;
+    border: 1px solid #68d391;
+}
+
+.maintenance-modal .category-tag {
+    display: inline-flex;
+    align-items: center;
+    background: #edf2f7;
+    color: #4a5568;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.maintenance-modal .status-section {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #e3e6f0;
+}
+
+.maintenance-modal .status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.25rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.maintenance-modal .status-badge.open {
+    background: linear-gradient(135deg, #fef5e7, #fed7aa);
+    color: #92400e;
+    border: 1px solid #fdba74;
+}
+
+.maintenance-modal .status-badge.in-progress {
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+    color: #1e40af;
+    border: 1px solid #93c5fd;
+}
+
+.maintenance-modal .status-badge.resolved {
+    background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+    color: #065f46;
+    border: 1px solid #6ee7b7;
+}
+
+.maintenance-modal .timeline-info {
+    color: #718096;
+    font-size: 0.875rem;
+    margin-left: 1rem;
+}
+
+.maintenance-modal .timeline-info i {
+    margin-right: 0.25rem;
+}
+
+.maintenance-modal .info-grid {
+    padding: 2rem;
+    background: #f8f9fc;
+}
+
+.maintenance-modal .info-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+.maintenance-modal .info-card:hover {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transform: translateY(-1px);
+}
+
+.maintenance-modal .info-card.tenant-card {
+    border-left: 4px solid #4299e1;
+}
+
+.maintenance-modal .info-card.property-card {
+    border-left: 4px solid #48bb78;
+}
+
+.maintenance-modal .card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.maintenance-modal .card-title i {
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.maintenance-modal .card-title.tenant-title {
+    color: #4299e1;
+}
+
+.maintenance-modal .card-title.property-title {
+    color: #48bb78;
+}
+
+.maintenance-modal .tenant-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.75rem;
+}
+
+.maintenance-modal .contact-link {
+    display: inline-flex;
+    align-items: center;
+    color: #4a5568;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    transition: color 0.2s ease;
+}
+
+.maintenance-modal .contact-link:hover {
+    color: #4299e1;
+}
+
+.maintenance-modal .contact-link i {
+    margin-right: 0.5rem;
+    width: 16px;
+    text-align: center;
+}
+
+.maintenance-modal .property-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+}
+
+.maintenance-modal .property-location {
+    color: #718096;
+    margin-bottom: 0;
+}
+
+.maintenance-modal .property-location i {
+    margin-right: 0.5rem;
+}
+
+.maintenance-modal .resolution-section {
+    background: white;
+    margin: 0 2rem 2rem 2rem;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid #c6f6d5;
+    background: linear-gradient(135deg, #f0fff4, #c6f6d5);
+}
+
+.maintenance-modal .resolution-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #276749;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+
+.maintenance-modal .resolution-title i {
+    margin-right: 0.5rem;
+}
+
+.maintenance-modal .resolution-content {
+    color: #2d3748;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.maintenance-modal .modal-footer {
+    border-top: 1px solid #e3e6f0;
+    background: white;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .maintenance-modal .modal-dialog {
+        margin: 0.5rem;
+        max-width: none;
+    }
+
+    .maintenance-modal .issue-header,
+    .maintenance-modal .status-section,
+    .maintenance-modal .info-grid {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .maintenance-modal .info-grid {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .maintenance-modal .resolution-section {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Loading state */
+.maintenance-modal .loading-state {
+    text-align: center;
+    padding: 3rem;
+    color: #718096;
+}
+
+.maintenance-modal .loading-state i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Animation for modal appearance */
+.maintenance-modal .modal.fade .modal-dialog {
+    transform: translate(0, -50px);
+    transition: transform 0.3s ease-out;
+}
+
+.maintenance-modal .modal.show .modal-dialog {
+    transform: translate(0, 0);
+}

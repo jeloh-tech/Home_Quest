@@ -1,0 +1,62 @@
+/* Enhanced animations */
+.fade-in {
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.slide-up {
+    animation: slideUp 1.5s ease-out 0.5s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* HELLO WORLD text sizing - matching Welcome to Home Rental System */
+#hello-world-section h2 {
+    font-size: 2.25rem !important;
+    font-weight: 800 !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.02em !important;
+}
+
+@media (max-width: 768px) {
+    #hello-world-section h2 {
+        font-size: 1.875rem !important;
+    }
+    #hello-world-section p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #hello-world-section h2 {
+        font-size: 1.5rem !important;
+    }
+    #hello-world-section p {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 390px) {
+    #hello-world-section h2 {
+        font-size: 1.25rem !important;
+    }
+}

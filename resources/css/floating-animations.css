@@ -1,0 +1,122 @@
+/* Professional Floating Animations */
+@keyframes gentleFloat {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-15px) rotate(1deg);
+    }
+}
+
+@keyframes subtleFloat {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(-0.5deg);
+    }
+}
+
+@keyframes smoothFloat1 {
+    0%, 100% {
+        transform: translateY(0px) translateX(0px) scale(1) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-8px) translateX(3px) scale(1.02) rotate(0.5deg);
+    }
+    50% {
+        transform: translateY(-15px) translateX(0px) scale(1.05) rotate(0deg);
+    }
+    75% {
+        transform: translateY(-8px) translateX(-3px) scale(1.02) rotate(-0.5deg);
+    }
+}
+
+@keyframes smoothFloat2 {
+    0%, 100% {
+        transform: translateY(0px) translateX(0px) scale(1) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-12px) translateX(-2px) scale(1.03) rotate(-0.3deg);
+    }
+    50% {
+        transform: translateY(-20px) translateX(0px) scale(1.06) rotate(0deg);
+    }
+    75% {
+        transform: translateY(-12px) translateX(2px) scale(1.03) rotate(0.3deg);
+    }
+}
+
+@keyframes particleFloat {
+    0%, 100% {
+        transform: translateY(0px) translateX(0px) scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateY(-60px) translateX(10px) scale(1.1);
+        opacity: 1;
+    }
+}
+
+@keyframes geometricPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Professional Animation Classes */
+.floating-image1 {
+    animation: gentleFloat 6s ease-in-out infinite;
+}
+
+.floating-image2 {
+    animation: subtleFloat 8s ease-in-out infinite;
+}
+
+.floating-image3 {
+    animation: gentleFloat 10s ease-in-out infinite;
+}
+
+.floating-image4 {
+    animation: subtleFloat 7s ease-in-out infinite;
+}
+
+.floating-image5 {
+    animation: gentleFloat 9s ease-in-out infinite;
+}
+
+.smooth-float-1 {
+    animation: smoothFloat1 12s ease-in-out infinite;
+}
+
+.smooth-float-2 {
+    animation: smoothFloat2 15s ease-in-out infinite;
+}
+
+.geometric-shape {
+    animation: geometricPulse 6s ease-in-out infinite;
+}
+
+.particle-float {
+    animation: particleFloat 8s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
